@@ -1,17 +1,9 @@
-"""
-Django settings for personal_site project.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/1.7/topics/settings/
-
-For the full list of settings and their values, see
-https://docs.djangoproject.com/en/1.7/ref/settings/
-"""
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+PROJECT_DIR = os.path.dirname(__file__).decode('utf-8')
+MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media/')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -21,6 +13,11 @@ SECRET_KEY = '1cz1-1g-dw)t-9^uua@yanq4g#skz56m9a8jw+0g=1p-h#1wp='
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+ADMINS = (
+    ('Danilo Bustos', 'dbustos10@gmail.com'),
+)
+
 
 TEMPLATE_DEBUG = True
 
@@ -68,7 +65,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Santiago'
 
 USE_I18N = True
 
