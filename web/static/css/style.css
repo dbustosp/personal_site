@@ -409,9 +409,9 @@ a:hover{
 	color: #ecf0f1;
 	background-size: cover;
 	-webkit-background-size: cover;
-	   -moz-background-size: cover;
-	    -ms-background-size: cover;
-	     -o-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
 }
 
 #header .title-header h1{
@@ -429,7 +429,7 @@ a:hover{
 
 #header .overlay{
 	background-color: rgba(0, 0, 0, 0.6);
-	padding: 0 0 70px;
+	padding: 0 0 150px;
 }
 
 #header .header-top{
