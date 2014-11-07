@@ -10,7 +10,7 @@ MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media/')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '1cz1-fpofmpfpmfmp'
-DEBUG = False
+DEBUG = True
 
 ADMINS = (
     ('Danilo Bustos', 'dbustos10@gmail.com'),
@@ -77,8 +77,39 @@ USE_L10N = True
 
 USE_TZ = True
 
+STATICFILES_DIRS = (
+    #os.path.join(BASE_DIR, "static"),
+    #'/Users/danilobustos/personal_site/static/',
+)
+
+# List of finder classes that know how to find static files in
+# various locations.
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+)
+
+# List of callables that know how to import templates from various sources.
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader',
+#     'django.template.loaders.eggs.Loader',
+)
+
+TEMPLATE_DIRS = (
+    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+    # os.path.join(os.path.dirname(__file__), 'templates')
+    # SITE_PATH+'/usach/templates'
+)
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
+
+# URL static files
+STATIC_ROOT = "/home/dbustos/personal_site/static/"
 
 STATIC_URL = '/static/'
