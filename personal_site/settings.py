@@ -9,10 +9,8 @@ MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media/')
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '1cz1-1g-dw)t-9^uua@yanq4g#skz56m9a8jw+0g=1p-h#1wp='
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+SECRET_KEY = '1cz1-fpofmpfpmfmp'
+DEBUG = False
 
 ADMINS = (
     ('Danilo Bustos', 'dbustos10@gmail.com'),
@@ -21,7 +19,7 @@ ADMINS = (
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
