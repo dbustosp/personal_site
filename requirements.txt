@@ -5,3 +5,4 @@ PyPDF2==1.22
 South==1.0.1
 Twisted==13.2.0
 altgraph==0.10.2
+dj-database-url==0.3.0
