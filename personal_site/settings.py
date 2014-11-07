@@ -1,6 +1,23 @@
+import dj_database_url
+DATABASES['default'] =  dj_database_url.config()
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+ALLOWED_HOSTS = ['*']
+
+
+
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+# URL static files
+STATIC_ROOT = "/home/dbustos/personal_site/static/"
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 PROJECT_DIR = os.path.dirname(__file__).decode('utf-8')
 MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media/')
@@ -18,9 +35,6 @@ ADMINS = (
 
 
 TEMPLATE_DEBUG = True
-
-ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -109,7 +123,4 @@ TEMPLATE_DIRS = (
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
-# URL static files
-STATIC_ROOT = "/home/dbustos/personal_site/static/"
 
-STATIC_URL = '/static/'
