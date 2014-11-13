@@ -1,5 +1,5 @@
 import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
+#DATABASES['default'] =  dj_database_url.config()
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
@@ -64,6 +64,16 @@ WSGI_APPLICATION = 'personal_site.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
+DATABASES = {
+     'default': {
+         'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+         'NAME': 'd3fm0u67tb6ndl',                      # Or path to database file if using sqlite3.
+         'USER': 'zsnsvplamuwjsq',                      # Not used with sqlite3.
+         'PASSWORD': '947wY90OmoDAoM0ltFwzsropSU',                  # Not used with sqlite3.
+         'HOST': 'ec2-54-83-33-14.compute-1.amazonaws.com',                      # Set to empty string for localhost. Not used with sqlite3.
+         'PORT': '5432',                      # Set to empty string for default. Not used with sqlite3.
+     }
+}
 
 """
 DATABASES = {
