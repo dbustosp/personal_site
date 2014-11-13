@@ -7,4 +7,4 @@ Twisted==13.2.0
 altgraph==0.10.2
 dj-database-url==0.3.0
 psycopg2==2.4.4
-gunicorn==0.14.2
+gunicorn==19.1.1
