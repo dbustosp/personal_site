@@ -52,6 +52,7 @@ WSGI_APPLICATION = 'personal_site.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
+
 """
 DATABASES = {
      'default': {
@@ -76,6 +77,7 @@ DATABASES = {
      }
 }
 
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
@@ -88,6 +90,11 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+STATIC_URL = '/static/'
+
+# URL static files
+STATIC_ROOT = "/Users/danilobustos/personal_site/static/"
 
 STATICFILES_DIRS = (
     #os.path.join(BASE_DIR, "static"),
@@ -116,12 +123,3 @@ TEMPLATE_DIRS = (
     # os.path.join(os.path.dirname(__file__), 'templates')
     # SITE_PATH+'/usach/templates'
 )
-
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.7/howto/static-files/
-
-# URL static files
-STATIC_ROOT = "/home/dbustos/personal_site/static/"
-
-STATIC_URL = '/static/'
