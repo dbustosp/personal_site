@@ -1,6 +1,16 @@
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = "static/"
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+
 
 PROJECT_DIR = os.path.dirname(__file__).decode('utf-8')
 MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media/')
@@ -10,7 +20,7 @@ MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media/')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '1cz1-fpofmpfpmfmp'
-DEBUG = True
+DEBUG = False
 
 ADMINS = (
     ('Danilo Bustos', 'dbustos10@gmail.com'),
@@ -53,7 +63,8 @@ WSGI_APPLICATION = 'personal_site.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
-"""
+
+
 DATABASES = {
      'default': {
          'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
@@ -64,8 +75,8 @@ DATABASES = {
          'PORT': '3306',                      # Set to empty string for default. Not used with sqlite3.
      }
 }
-"""
 
+"""
 DATABASES = {
      'default': {
          'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
@@ -76,7 +87,7 @@ DATABASES = {
          'PORT': '5432',                      # Set to empty string for default. Not used with sqlite3.
      }
 }
-
+"""
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
@@ -90,16 +101,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
-STATIC_URL = '/static/'
-
-# URL static files
-STATIC_ROOT = "/Users/danilobustos/personal_site/static/"
-
-STATICFILES_DIRS = (
-    #os.path.join(BASE_DIR, "static"),
-    #'/Users/danilobustos/personal_site/static/',
-)
 
 # List of finder classes that know how to find static files in
 # various locations.
