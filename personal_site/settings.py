@@ -3,17 +3,16 @@ import os
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = "static/"
+PROJECT_DIR = os.path.dirname(__file__).decode('utf-8')
+MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media/')
+
+STATIC_ROOT = "/app"
 STATIC_URL = '/static/'
+
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
-
-
-
-PROJECT_DIR = os.path.dirname(__file__).decode('utf-8')
-MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media/')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
