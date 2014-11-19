@@ -64,7 +64,7 @@ WSGI_APPLICATION = 'personal_site.wsgi.application'
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
 
-
+"""
 DATABASES = {
      'default': {
          'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
@@ -75,8 +75,8 @@ DATABASES = {
          'PORT': '3306',                      # Set to empty string for default. Not used with sqlite3.
      }
 }
-
 """
+
 DATABASES = {
      'default': {
          'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
@@ -87,7 +87,6 @@ DATABASES = {
          'PORT': '5432',                      # Set to empty string for default. Not used with sqlite3.
      }
 }
-"""
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
