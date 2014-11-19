@@ -1,12 +1,13 @@
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.dirname(__file__).decode('utf-8')
 MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media/')
 
-STATIC_ROOT = "/app"
+STATIC_ROOT = 'static'
 STATIC_URL = '/static/'
 
 
