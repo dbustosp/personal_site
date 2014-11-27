@@ -10,17 +10,19 @@ MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media/')
 STATIC_ROOT = 'static'
 STATIC_URL = '/static/'
 
+print STATIC_ROOT
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+
+#STATICFILES_DIRS = (
+#    os.path.join(BASE_DIR, 'static'),
+#)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '1cz1-fpofmpfpmfmp'
-DEBUG = False
+SECRET_KEY = '1cz1-fpofmpfffmfmllmfmlkfmlffpmfmp'
+DEBUG = True
 
 ADMINS = (
     ('Danilo Bustos', 'dbustos10@gmail.com'),
